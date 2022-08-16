@@ -7,9 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/19Jlvtwqpb-lQGvuFr72Q_Sh6k8kCYrJ6
 """
 
-!pip install flask-ngrok
-!pip install transformers
-
 from transformers import GPT2LMHeadModel,GPT2Tokenizer
 from flask import Flask,request,jsonify
 from flask_ngrok import run_with_ngrok
