@@ -11,9 +11,6 @@ from transformers import GPT2LMHeadModel,GPT2Tokenizer
 from flask import Flask,request,jsonify
 from flask_ngrok import run_with_ngrok
 
-tokenizer = GPT2Tokenizer.from_pretrained('gpt2-large')
-model = GPT2LMHeadModel.from_pretrained("gpt2-large",pad_token_id=tokenizer.eos_token_id)
-
 app = Flask(__name__)
 run_with_ngrok(app)
 
@@ -23,6 +20,9 @@ def greet():
 
 @app.route("/post",methods=['POST'])
 def create():
+  tokenizer = GPT2Tokenizer.from_pretrained('gpt2-large')
+  model = GPT2LMHeadModel.from_pretrained("gpt2-large",pad_token_id=tokenizer.eos_token_id)
+
   sen = request.form('topic')
   len = request.form('length')
   input_ids = tokenizer.encode(sen,return_tensors='pt')
