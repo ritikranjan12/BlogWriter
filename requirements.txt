@@ -1,6 +1,6 @@
 -f https://download.pytorch.org/whl/torch_stable.html
-torch=="*"+cpu 
-torchvision=="*"+cpu
+torch==1.12.0+cpu 
+torchvision==0.13.0+cpu
 gunicorn
 transformers
 flask-ngrok
