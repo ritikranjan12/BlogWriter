@@ -2,4 +2,5 @@ gunicorn
 transformers
 flask-ngrok
 Flask
-tensorflow-cpu
+torch-1.12.1+cpu
+torchvision==0.13.0+cpu
