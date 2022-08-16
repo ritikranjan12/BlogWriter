@@ -2,5 +2,4 @@ gunicorn
 transformers
 flask-ngrok
 Flask
-torch
-torchvision
+tensorflow-cpu
