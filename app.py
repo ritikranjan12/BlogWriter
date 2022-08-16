@@ -17,7 +17,11 @@ model = GPT2LMHeadModel.from_pretrained("gpt2-large",pad_token_id=tokenizer.eos_
 app = Flask(__name__)
 run_with_ngrok(app)
 
-@app.route("/",methods=['POST'])
+@app.route('/')
+def greet():
+    return jsonify({"response":"Hello World"}), 200
+
+@app.route("/post",methods=['POST'])
 def create():
   sen = request.form('topic')
   len = request.form('length')
