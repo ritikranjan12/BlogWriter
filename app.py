@@ -7,12 +7,12 @@ Original file is located at
     https://colab.research.google.com/drive/19Jlvtwqpb-lQGvuFr72Q_Sh6k8kCYrJ6
 """
 
-from transformers import TFGPT2LMHeadModel,GPT2Tokenizer
+from transformers import GPT2LMHeadModel,GPT2Tokenizer
 from flask import Flask,request,jsonify
 from flask_ngrok import run_with_ngrok
 
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2-large')
-model = TFGPT2LMHeadModel.from_pretrained("gpt2-large",pad_token_id=tokenizer.eos_token_id)
+model = GPT2LMHeadModel.from_pretrained("gpt2-large",pad_token_id=tokenizer.eos_token_id)
 
 app = Flask(__name__)
 run_with_ngrok(app)
