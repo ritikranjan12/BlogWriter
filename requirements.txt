@@ -1,0 +1,4 @@
+gunicorn
+transformers
+flask-ngrok
+Flask
