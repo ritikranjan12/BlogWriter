@@ -2,5 +2,5 @@ gunicorn
 transformers
 flask-ngrok
 Flask
-torch==1.12.1+cpu
-torchvision==0.13.0+cpu
+torch=="*"+cpu
+torchvision=="*"+cpu
