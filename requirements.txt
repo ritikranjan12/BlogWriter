@@ -1,4 +1,6 @@
-http://download.pytorch.org/whl/cpu/torch-1.12.0-cp36-cp36m-linux_x86_64.whl
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==1.12.1+cpu 
+torchvision==0.13.0+cpu
 gunicorn
 transformers
 flask-ngrok
